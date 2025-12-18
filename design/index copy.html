@@ -1,0 +1,1163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>RoseGold Nights — Modern Glam Events</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            glam: ['Poppins', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            rg: {
+              deep: '#0D0B0B',   // background
+              rose: '#CFA89A',   // rose gold
+              champ: '#E2C79C',  // champagne gold
+              copper: '#B97F72', // warm accent
+              panel: 'rgba(255,255,255,0.05)',
+            },
+          },
+          boxShadow: {
+            glam: '0 24px 80px rgba(0,0,0,0.65)',
+            card: '0 16px 40px rgba(0,0,0,0.45)',
+          },
+          transitionTimingFunction: {
+            expo: 'cubic-bezier(.19,1,.22,1)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+
+    :root {
+      --deep: #0D0B0B;
+      --rose: #CFA89A;
+      --champ: #E2C79C;
+      --copper: #B97F72;
+      --panel: rgba(255,255,255,0.05);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(circle at top, #241010 0, #050404 55%, #000 100%);
+      color: #f7f2ec;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* HEADER */
+    .header-blur {
+      backdrop-filter: blur(10px);
+      background: linear-gradient(180deg, rgba(0,0,0,0.7), rgba(0,0,0,0.35));
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: transform .3s ease;
+    }
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+
+    /* HERO */
+    #heroVideo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top, rgba(207,168,154,0.45), transparent 55%),
+        radial-gradient(circle at bottom, rgba(185,127,114,0.35), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.8), #050404 80%);
+    }
+
+    .hero-glass {
+      background: radial-gradient(circle at top, rgba(255,255,255,0.2), rgba(0,0,0,0.85));
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.24);
+      box-shadow: 0 40px 140px rgba(0,0,0,1);
+      position: relative;
+      overflow: hidden;
+      animation: heroZoomIn 1.1s cubic-bezier(.19,1,.22,1) both,
+                 heroGlow 4.5s ease-in-out infinite alternate;
+    }
+
+    /* spotlight behind title */
+    .hero-spotlight::before {
+      content: "";
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(207,168,154,0.55), transparent 65%);
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: blur(10px);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-headline {
+      font-family: Poppins, system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      font-size: 0.8rem;
+      animation: textSlideDown .9s cubic-bezier(.19,1,.22,1) .2s both;
+    }
+
+    .hero-main {
+      font-family: Poppins, system-ui, sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      animation: textPopUp 1s cubic-bezier(.19,1,.22,1) .4s both;
+    }
+
+    .hero-desc {
+      animation: textFadeUp 1s cubic-bezier(.19,1,.22,1) .6s both;
+    }
+
+    .hero-actions {
+      animation: textFadeUp 1s cubic-bezier(.19,1,.22,1) .8s both;
+    }
+
+    @keyframes heroZoomIn {
+      0% { opacity: 0; transform: translateY(30px) scale(0.94); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes heroGlow {
+      0% { box-shadow: 0 30px 110px rgba(0,0,0,0.95); }
+      100% { box-shadow: 0 45px 160px rgba(0,0,0,1); }
+    }
+    @keyframes textSlideDown {
+      0% { opacity: 0; transform: translateY(-14px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes textPopUp {
+      0% { opacity: 0; transform: translateY(18px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes textFadeUp {
+      0% { opacity: 0; transform: translateY(18px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* BUTTONS */
+    .btn {
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      padding: 0.65rem 1.2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary {
+      background: linear-gradient(120deg, var(--rose), var(--copper));
+      color: #0b0606;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.7);
+      transition: transform .18s ease, box-shadow .18s ease;
+      animation: btnIdlePulse 2.3s ease-in-out infinite alternate;
+    }
+    .btn-primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -60%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.75), transparent);
+      transform: skewX(-20deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .btn-primary:hover::before {
+      animation: btn-shine 0.9s ease-out;
+      opacity: 1;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 26px 80px rgba(0,0,0,0.9);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #f7f2ec;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background .18s ease, transform .18s ease;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-1px);
+    }
+
+    @keyframes btn-shine {
+      0% { transform: translateX(-120%) skewX(-20deg); opacity: 0; }
+      30% { opacity: 1; }
+      100% { transform: translateX(220%) skewX(-20deg); opacity: 0; }
+    }
+    @keyframes btnIdlePulse {
+      0% { transform: translateY(0) scale(1); box-shadow: 0 18px 50px rgba(0,0,0,0.7); }
+      100% { transform: translateY(-1px) scale(1.02); box-shadow: 0 24px 70px rgba(0,0,0,0.85); }
+    }
+
+    /* CARD STYLES */
+    .event-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 22px 60px rgba(0,0,0,0.8);
+      overflow: hidden;
+      position: relative;
+      transition: transform .42s cubic-bezier(.19,1,.22,1), box-shadow .42s cubic-bezier(.19,1,.22,1);
+    }
+    .event-card::after {
+      content: "";
+      position: absolute;
+      inset: -20%;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.22), transparent 55%);
+      opacity: 0;
+      transition: opacity .35s ease;
+      pointer-events: none;
+    }
+    .event-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -40%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+      transform: translateX(-120%) rotate(12deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .event-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 36px 110px rgba(0,0,0,1);
+    }
+    .event-card:hover::after {
+      opacity: 1;
+    }
+    .event-card:hover::before {
+      animation: cardStreak 0.9s cubic-bezier(.19,1,.22,1);
+      opacity: 1;
+    }
+
+    @keyframes cardStreak {
+      0% { transform: translateX(-140%) rotate(12deg); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateX(260%) rotate(12deg); opacity: 0; }
+    }
+
+    .event-tag {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--rose);
+    }
+
+    .metal-border {
+      position: relative;
+      border-radius: 16px;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.45), rgba(207,168,154,0.1));
+    }
+    .metal-inner {
+      border-radius: 14px;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.18), rgba(0,0,0,0.95));
+      padding: 1rem;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0.4rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(226,199,156,0.9), rgba(185,127,114,0.2));
+    }
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 9999px;
+      background: var(--champ);
+      box-shadow: 0 0 16px rgba(226,199,156,0.9);
+      flex-shrink: 0;
+    }
+
+    /* REVEAL ANIMATION - high impact but still smooth */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px) scale(0.96);
+      transition:
+        opacity .8s cubic-bezier(.19,1,.22,1),
+        transform .8s cubic-bezier(.19,1,.22,1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* PARALLAX SOFT */
+    .parallax-soft {
+      transform: translateY(0);
+      transition: transform .12s linear;
+    }
+
+    /* GALLERY */
+    .gallery-item img {
+      transition:
+        transform .55s cubic-bezier(.19,1,.22,1),
+        box-shadow .55s cubic-bezier(.19,1,.22,1);
+    }
+    .gallery-item:hover img {
+      transform: translateY(-10px) scale(1.06) rotate(-1.6deg);
+      box-shadow: 0 30px 90px rgba(0,0,0,0.95);
+    }
+
+    /* CONTACT success flash */
+    .flash-success {
+      animation: flash 1.2s ease-out;
+    }
+    @keyframes flash {
+      0% { background-color: rgba(226,199,156,0); }
+      40% { background-color: rgba(226,199,156,0.3); }
+      100% { background-color: rgba(226,199,156,0); }
+    }
+
+    /* MODAL */
+    .modal-bg {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+    }
+    .modal-open {
+      display: flex;
+    }
+    .modal-panel {
+      width: 100%;
+      max-width: 640px;
+      background: radial-gradient(circle at top, #2b1512, #070404 60%);
+      border-radius: 20px;
+      padding: 1.8rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      box-shadow: 0 40px 120px rgba(0,0,0,0.95);
+      animation: heroZoomIn .8s cubic-bezier(.19,1,.22,1) both;
+    }
+
+    /* MOBILE FLOATING CTA */
+    .floating-cta {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      z-index: 50;
+    }
+
+    @media (min-width: 768px) {
+      .floating-cta { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal,
+      .event-card,
+      .gallery-item img,
+      .btn-primary,
+      .hero-glass,
+      .parallax-soft {
+        transition: none !important;
+        transform: none !important;
+        animation: none !important;
+      }
+    }
+
+    /* PRE HEADER */
+.pre-header {
+  height: 38px;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.55)
+  );
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.pre-link {
+  color: rgba(255,255,255,0.75);
+  transition: color .2s ease, transform .2s ease;
+}
+
+.pre-link:hover {
+  color: var(--champ);
+  transform: translateY(-1px);
+}
+
+.social-icon {
+  color: rgba(255,255,255,0.7);
+  transition: color .2s ease, transform .2s ease;
+}
+
+.social-icon:hover {
+  color: var(--rose);
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* PUSH MAIN HEADER DOWN */
+#siteHeader {
+  top: 38px;
+}
+
+/* MOBILE TWEAK */
+@media (max-width: 640px) {
+  .pre-header {
+    font-size: 0.65rem;
+  }
+}
+/* PREMIUM FOOTER */
+.footer-premium {
+  background: radial-gradient(circle at top, #1c0d0c, #050404 70%);
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.footer-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, var(--rose), var(--copper));
+  color: #0b0606;
+  font-weight: 900;
+  letter-spacing: 0.28em;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 22px 70px rgba(0,0,0,0.9);
+}
+
+.footer-title {
+  font-family: Poppins, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.85rem;
+}
+
+.footer-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.55);
+}
+
+.footer-desc {
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.65);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.75);
+  transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+
+.footer-socials a svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.footer-socials a:hover {
+  background: linear-gradient(140deg, var(--rose), var(--copper));
+  color: #0b0606;
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* FOOTER LINKS */
+.footer-heading {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: var(--champ);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.65);
+  transition: color .2s ease, transform .2s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--rose);
+  transform: translateX(4px);
+}
+
+/* BOTTOM STRIP */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+}
+  </style>
+</head>
+<body class="bg-rg-deep">
+<!-- PRE HEADER -->
+<div id="preHeader" class="fixed top-0 left-0 right-0 z-50 pre-header">
+  <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
+
+    <!-- LEFT : EMAIL -->
+    <a href="mailto:hello@rosegoldnights.com"
+       class="flex items-center gap-2 pre-link">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 4h16v16H4z"/>
+        <path d="M22 6l-10 7L2 6"/>
+      </svg>
+      <span class="hidden sm:inline">hello@rosegoldnights.com</span>
+    </a>
+
+    <!-- RIGHT : SOCIAL ICONS -->
+    <div class="flex items-center gap-3">
+      <a href="#" class="social-icon" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none"
+             stroke="currentColor" stroke-width="1.6">
+          <rect x="2" y="2" width="20" height="20" rx="6"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1"/>
+        </svg>
+      </a>
+
+      <a href="#" class="social-icon" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none"
+             stroke="currentColor" stroke-width="1.6">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+      </a>
+
+      <a href="#" class="social-icon" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none"
+             stroke="currentColor" stroke-width="1.6">
+          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1
+          A10.66 10.66 0 0 1 3 4s-4 9 5 13
+          a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5
+          a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+  <!-- HEADER -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 header-blur">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#hero" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-b from-rg-rose to-rg-copper flex items-center justify-center shadow-glam text-[#0b0606] font-bold text-xs tracking-[0.25em]">
+          RG
+        </div>
+        <div class="leading-tight">
+          <div class="text-xs font-semibold uppercase tracking-[0.2em] text-rg-champ">
+            RoseGold Nights
+          </div>
+          <div class="text-[11px] text-[rgba(255,255,255,0.7)]">
+            Modern Glam Events
+          </div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-[11px] font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.7)]">
+        <a href="#hero" class="hover:text-rg-champ">Home</a>
+        <a href="#events" class="hover:text-rg-champ">Events</a>
+        <a href="#about" class="hover:text-rg-champ">About</a>
+        <a href="#team" class="hover:text-rg-champ">Team</a>
+        <a href="#gallery" class="hover:text-rg-champ">Gallery</a>
+        <a href="#contact" class="hover:text-rg-champ">Contact</a>
+        <button
+          class="btn btn-primary ml-2"
+          onclick="openBooking('RoseGold Nights — Booking')"
+        >
+          Book Now
+        </button>
+      </nav>
+
+      <button
+        id="menuToggle"
+        class="md:hidden p-1 text-rg-champ"
+        aria-label="Toggle menu"
+      >
+        <svg id="menuIcon" width="26" height="26" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+          <path d="M3 7h18M3 12h18M3 17h18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-[rgba(255,255,255,0.1)] bg-black/80">
+      <nav class="flex flex-col px-4 pt-2 pb-4 gap-2 text-[11px] tracking-[0.18em] uppercase text-[rgba(255,255,255,0.8)]">
+        <a href="#hero" class="py-2">Home</a>
+        <a href="#events" class="py-2">Events</a>
+        <a href="#about" class="py-2">About</a>
+        <a href="#team" class="py-2">Team</a>
+        <a href="#gallery" class="py-2">Gallery</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <button
+          class="btn btn-primary w-full mt-2"
+          onclick="openBooking('RoseGold Nights — Booking')"
+        >
+          Book Now
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- FLOATING CTA (MOBILE) -->
+  <div class="floating-cta">
+    <button
+      class="btn btn-primary"
+      onclick="openBooking('RoseGold Nights — Booking')"
+    >
+      Book
+    </button>
+  </div>
+
+  <!-- HERO (centered) -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <video
+      id="heroVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+      <!-- Replace this with your hosted hero video -->
+      <source src="YOUR_HERO_VIDEO_URL.mp4" type="video/mp4"/>
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="relative z-10 max-w-3xl w-full px-4">
+      <div class="hero-glass hero-spotlight parallax-soft text-center px-6 py-10 md:px-10 md:py-14" data-parallax-speed="0.15">
+        <div class="hero-headline text-[rgba(255,255,255,0.75)] mb-3">
+          LIMITED SERIES · 2025
+        </div>
+        <h1 class="hero-main text-xl md:text-3xl text-rg-champ mb-4">
+          ROSEGOLD NIGHTS
+        </h1>
+        <p class="hero-desc text-[0.95rem] md:text-[1rem] text-[rgba(255,255,255,0.86)] max-w-xl mx-auto">
+          A modern glam night series with live music, couture lighting and curated hospitality —
+          crafted as cinematic, once-only experiences.
+        </p>
+        <div class="hero-actions mt-7 flex items-center justify-center gap-3 flex-wrap">
+          <button
+            class="btn btn-primary"
+            onclick="openBooking('RoseGold Nights — Featured Booking')"
+          >
+            Book Now
+          </button>
+          <a href="#events" class="btn btn-ghost">
+            View Events
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section id="events" class="py-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10 reveal parallax-soft" data-parallax-speed="0.06">
+        <div class="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          EVENTS
+        </div>
+        <h2 class="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          Upcoming & Past Nights
+        </h2>
+        <p class="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.7)] max-w-xl mx-auto">
+          Premium, small-capacity nights curated for sound, light, and detail.
+        </p>
+      </div>
+
+      <!-- UPCOMING (Swiper) -->
+      <div class="mb-12 reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">UPCOMING</div>
+          <div class="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
+            Limited seats · Advance only
+          </div>
+        </div>
+
+        <div class="swiper upcomingSwiper">
+          <div class="swiper-wrapper">
+
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="event-card grid md:grid-cols-[1.3fr,1fr] gap-0 overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="event1.jpg"
+                    alt="Winter RoseGala"
+                    class="w-full h-64 md:h-full object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-xs text-[rgba(255,255,255,0.9)]">
+                    <div class="event-tag">Dec 21 · Winter RoseGala</div>
+                    <div class="text-[0.9rem] font-semibold mt-1">
+                      Orchestra · Live Vocalists · DJ Afterparty
+                    </div>
+                  </div>
+                </div>
+                <div class="p-5 md:p-6 flex flex-col justify-between bg-black/70">
+                  <div>
+                    <div class="event-tag mb-2">Featured Night</div>
+                    <h3 class="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
+                      Winter RoseGala
+                    </h3>
+                    <p class="mt-3 text-[0.86rem] text-[rgba(255,255,255,0.8)]">
+                      A cinematic gala night with a full string section, live vocal acts, couture
+                      lighting and a curated afterparty in the lounge.
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-3 text-[10px] tracking-[0.14em] uppercase text-[rgba(255,255,255,0.65)]">
+                      <span>Welcome champagne</span> ·
+                      <span>Red carpet entry</span> ·
+                      <span>Dress: Modern glam</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 flex items-center justify-between gap-3 text-[11px]">
+                    <div class="text-[rgba(255,255,255,0.75)]">
+                      From <span class="text-rg-champ font-semibold">$120</span> per guest
+                    </div>
+                    <div class="flex gap-2">
+                      <button
+                        class="btn btn-primary"
+                        onclick="openBooking('Winter RoseGala · Dec 21')"
+                      >
+                        Book
+                      </button>
+                      <button class="btn btn-ghost border border-[rgba(255,255,255,0.35)]">
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="event-card grid md:grid-cols-[1.3fr,1fr] gap-0 overflow-hidden">
+                <div class="relative">
+                  <img
+                    src="event2.jpg"
+                    alt="Midnight Copper Session"
+                    class="w-full h-64 md:h-full object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-xs text-[rgba(255,255,255,0.9)]">
+                    <div class="event-tag">Jan 11 · Midnight Copper</div>
+                    <div class="text-[0.9rem] font-semibold mt-1">
+                      Deep house · Live sax · Velvet lounge
+                    </div>
+                  </div>
+                </div>
+                <div class="p-5 md:p-6 flex flex-col justify-between bg-black/70">
+                  <div>
+                    <div class="event-tag mb-2">Late Session</div>
+                    <h3 class="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
+                      Midnight Copper Session
+                    </h3>
+                    <p class="mt-3 text-[0.86rem] text-[rgba(255,255,255,0.8)]">
+                      Late-night live deep-house set with live saxophone, velvet booths and cinematic
+                      lighting in an intimate lounge.
+                    </p>
+                    <div class="mt-3 flex flex-wrap gap-3 text-[10px] tracking-[0.14em] uppercase text-[rgba(255,255,255,0.65)]">
+                      <span>Doors 10 PM</span> ·
+                      <span>Live sax set</span> ·
+                      <span>Limited couches</span>
+                    </div>
+                  </div>
+                  <div class="mt-4 flex items-center justify-between gap-3 text-[11px]">
+                    <div class="text-[rgba(255,255,255,0.75)]">
+                      From <span class="text-rg-champ font-semibold">$90</span> per guest
+                    </div>
+                    <div class="flex gap-2">
+                      <button
+                        class="btn btn-primary"
+                        onclick="openBooking('Midnight Copper Session · Jan 11')"
+                      >
+                        Book
+                      </button>
+                      <button class="btn btn-ghost border border-[rgba(255,255,255,0.35)]">
+                        Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <div class="mt-4 flex items-center justify-between">
+            <div class="swiper-pagination"></div>
+            <div class="flex gap-2">
+              <div class="swiper-button-prev !static !w-8 !h-8 !rounded-full !border !border-[rgba(255,255,255,0.35)] !flex !items-center !justify-center !text-[rgba(255,255,255,0.9)]"></div>
+              <div class="swiper-button-next !static !w-8 !h-8 !rounded-full !border !border-[rgba(255,255,255,0.35)] !flex !items-center !justify-center !text-[rgba(255,255,255,0.9)]"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- PAST (Timeline) -->
+      <div class="grid md:grid-cols-2 gap-10 reveal">
+        <div>
+          <div class="text-xs font-semibold tracking-[0.18em] uppercase text-[rgba(255,255,255,0.75)] mb-2">
+            PAST EDITIONS
+          </div>
+          <p class="text-[0.9rem] text-[rgba(255,255,255,0.75)] max-w-md">
+            Each RoseGold Night is produced as a one-off experience. Here’s a glimpse of where we've been.
+          </p>
+        </div>
+        <div class="timeline space-y-5 text-[0.85rem]">
+          <div class="flex gap-3 items-start">
+            <div class="mt-1 timeline-dot"></div>
+            <div>
+              <div class="text-rg-champ font-semibold">
+                Autumn Velvet — Sep 2025
+              </div>
+              <div class="text-[rgba(255,255,255,0.7)]">
+                A velvet-themed evening with string trio and live DJs. Sold out in 6 days.
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="mt-1 timeline-dot"></div>
+            <div>
+              <div class="text-rg-champ font-semibold">
+                Summer Champagne Deck — Jul 2025
+              </div>
+              <div class="text-[rgba(255,255,255,0.7)]">
+                Rooftop summer night featuring live vocal house, open-air terrace and champagne bar.
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-3 items-start">
+            <div class="mt-1 timeline-dot"></div>
+            <div>
+              <div class="text-rg-champ font-semibold">
+                Spring Blush Session — Apr 2025
+              </div>
+              <div class="text-[rgba(255,255,255,0.7)]">
+                An intimate indoor evening with a jazz trio and minimal-luxe staging.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- TEAM & SPONSORS -->
+
+  <!-- GALLERY -->
+
+  <!-- CONTACT -->
+
+  <!-- FOOTER -->
+
+
+  <!-- BOOKING MODAL -->
+  <div id="bookingModal" class="modal-bg">
+    <div class="modal-panel">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <div class="text-[11px] tracking-[0.2em] uppercase text-rg-rose mb-1">
+            BOOKING REQUEST
+          </div>
+          <h3 id="bookingTitle" class="text-sm font-semibold text-rg-champ tracking-[0.18em] uppercase">
+            RoseGold Nights — Booking
+          </h3>
+        </div>
+        <button
+          onclick="closeBooking()"
+          class="text-[rgba(255,255,255,0.8)] hover:text-white"
+          aria-label="Close"
+        >
+          &times;
+        </button>
+      </div>
+
+      <form
+        onsubmit="event.preventDefault(); alert('Demo booking submitted — connect this to your backend.'); closeBooking();"
+        class="space-y-4"
+      >
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.7)]">
+              Full Name
+            </label>
+            <input
+              type="text"
+              required
+              class="mt-1 w-full rounded-lg bg-black/70 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
+            />
+          </div>
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.7)]">
+              Email
+            </label>
+            <input
+              type="email"
+              required
+              class="mt-1 w-full rounded-lg bg-black/70 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
+            />
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.7)]">
+              Tickets
+            </label>
+            <input
+              type="number"
+              min="1"
+              value="2"
+              class="mt-1 w-full rounded-lg bg-black/70 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
+            />
+          </div>
+          <div>
+            <label class="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.7)]">
+              Tier
+            </label>
+            <select
+              class="mt-1 w-full rounded-lg bg-black/70 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
+            >
+              <option>Standard</option>
+              <option>VIP Table</option>
+              <option>Lounge Couch</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.7)]">
+            Notes
+          </label>
+          <textarea
+            rows="3"
+            class="mt-1 w-full rounded-lg bg-black/70 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
+          ></textarea>
+        </div>
+        <div class="flex items-center justify-end gap-3 mt-3">
+          <button
+            type="button"
+            onclick="closeBooking()"
+            class="btn btn-ghost border border-[rgba(255,255,255,0.3)]"
+          >
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-primary">
+            Submit Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    // Smooth anchor with header offset
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const targetId = href.slice(1);
+        const el = document.getElementById(targetId);
+        if (!el) return;
+        e.preventDefault();
+        const header = document.getElementById('siteHeader');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const rect = el.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const dest = rect.top + scrollTop - headerHeight + 4;
+        window.scrollTo({ top: dest, behavior: 'smooth' });
+        // close mobile menu
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+          menuIcon.innerHTML = '<path d="M3 7h18M3 12h18M3 17h18"/>';
+        } else {
+          menuIcon.innerHTML = '<path d="M4 4l16 16M20 4L4 20"/>';
+        }
+      });
+    }
+
+    // Header hide/show on scroll
+    let lastScrollY = window.scrollY;
+    const headerEl = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY && currentY > 120) {
+        headerEl.classList.add('header-hidden');
+      } else {
+        headerEl.classList.remove('header-hidden');
+      }
+      lastScrollY = currentY;
+    }, { passive: true });
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+    revealEls.forEach(el => io.observe(el));
+
+    // Parallax soft
+    const parallaxEls = document.querySelectorAll('.parallax-soft');
+    function handleParallax() {
+      const scrollY = window.scrollY;
+      parallaxEls.forEach(el => {
+        const speed = parseFloat(el.dataset.parallaxSpeed || '0.1');
+        el.style.transform = `translateY(${scrollY * -speed}px)`;
+      });
+    }
+    window.addEventListener('scroll', handleParallax, { passive: true });
+
+    // Swiper
+    new Swiper('.upcomingSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: { slidesPerView: 1 },
+      },
+    });
+
+    // Booking modal
+    const bookingModal = document.getElementById('bookingModal');
+    const bookingTitle = document.getElementById('bookingTitle');
+
+    function openBooking(title) {
+      if (title && bookingTitle) bookingTitle.textContent = title;
+      bookingModal.classList.add('modal-open');
+    }
+    function closeBooking() {
+      bookingModal.classList.remove('modal-open');
+    }
+    window.openBooking = openBooking;
+    window.closeBooking = closeBooking;
+
+    // Contact form demo
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const success = document.getElementById('contactSuccess');
+      if (success) {
+        success.classList.remove('hidden');
+        success.classList.add('flash-success');
+        setTimeout(() => {
+          success.classList.remove('flash-success');
+        }, 1300);
+      }
+      e.target.reset();
+    }
+    window.handleContactSubmit = handleContactSubmit;
+
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

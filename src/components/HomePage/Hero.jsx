@@ -3,7 +3,7 @@ import HeroVideo from "./HeroVideo";
 export default function Hero() {
   return (
     
-  <section id="hero" class="relative2 min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
     
     <HeroVideo />
     {/* <div class="hero-overlay"></div> */}

@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { useBooking } from "../../context/BookingContext";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function Events() {
+  const { openBooking } = useBooking();
+
   // Reveal on scroll
   useEffect(() => {
     const revealEls = document.querySelectorAll(".reveal");
@@ -38,10 +41,6 @@ export default function Events() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const openBooking = (title) => {
-    alert(`Booking: ${title}`);
-  };
 
   return (
     <section
@@ -224,48 +223,48 @@ export default function Events() {
         </div>
 
         {/* PAST EVENTS */}
-        <div class="grid md:grid-cols-2 gap-10 reveal">
+        <div className="grid md:grid-cols-2 gap-10 reveal">
           <div>
-            <div class="text-xs font-semibold tracking-[0.18em] uppercase text-[rgba(255,255,255,0.75)] mb-2">
+            <div className="text-xs font-semibold tracking-[0.18em] uppercase text-[rgba(255,255,255,0.75)] mb-2">
               PAST EDITIONS
             </div>
-            <p class="text-[0.9rem] text-[rgba(255,255,255,0.75)] max-w-md">
+            <p className="text-[0.9rem] text-[rgba(255,255,255,0.75)] max-w-md">
               Each RoseGold Night is produced as a one-off experience. Here’s a
               glimpse of where we've been.
             </p>
           </div>
-          <div class="timeline space-y-5 text-[0.85rem]">
-            <div class="flex gap-3 items-start">
-              <div class="mt-1 timeline-dot"></div>
+          <div className="timeline space-y-5 text-[0.85rem]">
+            <div className="flex gap-3 items-start">
+              <div className="mt-1 timeline-dot"></div>
               <div>
-                <div class="text-rg-champ font-semibold">
+                <div className="text-rg-champ font-semibold">
                   Autumn Velvet — Sep 2025
                 </div>
-                <div class="text-[rgba(255,255,255,0.7)]">
+                <div className="text-[rgba(255,255,255,0.7)]">
                   A velvet-themed evening with string trio and live DJs. Sold
                   out in 6 days.
                 </div>
               </div>
             </div>
-            <div class="flex gap-3 items-start">
-              <div class="mt-1 timeline-dot"></div>
+            <div className="flex gap-3 items-start">
+              <div className="mt-1 timeline-dot"></div>
               <div>
-                <div class="text-rg-champ font-semibold">
+                <div className="text-rg-champ font-semibold">
                   Summer Champagne Deck — Jul 2025
                 </div>
-                <div class="text-[rgba(255,255,255,0.7)]">
+                <div className="text-[rgba(255,255,255,0.7)]">
                   Rooftop summer night featuring live vocal house, open-air
                   terrace and champagne bar.
                 </div>
               </div>
             </div>
-            <div class="flex gap-3 items-start">
-              <div class="mt-1 timeline-dot"></div>
+            <div className="flex gap-3 items-start">
+              <div className="mt-1 timeline-dot"></div>
               <div>
-                <div class="text-rg-champ font-semibold">
+                <div className="text-rg-champ font-semibold">
                   Spring Blush Session — Apr 2025
                 </div>
-                <div class="text-[rgba(255,255,255,0.7)]">
+                <div className="text-[rgba(255,255,255,0.7)]">
                   An intimate indoor evening with a jazz trio and minimal-luxe
                   staging.
                 </div>

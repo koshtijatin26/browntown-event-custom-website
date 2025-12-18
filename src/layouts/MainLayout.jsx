@@ -1,17 +1,22 @@
-import { Outlet } from "react-router-dom"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import BookingModal from "../components/BookingModal";
+import { BookingProvider } from "../context/BookingContext";
 
 export default function MainLayout() {
   return (
-    <div className="bg-rg-deep">
-      <Header />
+    <BookingProvider>
+      <div className="bg-rg-deep">
+        <Header />
 
-      {/* <main className="flex-1"> */}
+        {/* <main className="flex-1"> */}
         <Outlet />
-      {/* </main> */}
+        {/* </main> */}
 
-      <Footer />
-    </div>
-  )
+        <Footer />
+        <BookingModal />
+      </div>
+    </BookingProvider>
+  );
 }

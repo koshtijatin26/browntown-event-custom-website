@@ -42,16 +42,16 @@ export default function Contact() {
             </div>
             <div>
               <label className="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">
-                Email
+                Phone Number
               </label>
               <input
-                type="email"
+                type="tel"
                 required
                 className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
               />
             </div>
           </div>
-          <div>
+          {/* <div>
             <label className="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">
               Subject
             </label>
@@ -59,7 +59,7 @@ export default function Contact() {
               type="text"
               className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
             />
-          </div>
+          </div> */}
           <div>
             <label className="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">
               Message

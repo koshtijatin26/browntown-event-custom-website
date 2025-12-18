@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { useBooking } from "../context/BookingContext";
 
 export default function BookingModal() {
     const { isModalOpen, bookingTitle, closeBooking } = useBooking();
+    const [success, setSuccess] = useState(false);
 
     if (!isModalOpen) return null;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSuccess(true);
+        setTimeout(() => {
+            setSuccess(false);
+            closeBooking();
+        }, 3000);
+    };
 
     return (
         <div className="modal-bg modal-open z-[60]" onClick={closeBooking}>
@@ -34,42 +45,50 @@ export default function BookingModal() {
                     Please fill out the form below to request your reservation.
                 </p>
 
-                <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-4" onSubmit={handleSubmit}>
                     <div>
                         <label className="block text-xs uppercase tracking-wider text-white/60 mb-1">
                             Name
                         </label>
                         <input
                             type="text"
+                            required
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
                             placeholder="Your full name"
                         />
                     </div>
                     <div>
                         <label className="block text-xs uppercase tracking-wider text-white/60 mb-1">
-                            Email
+                            Phone Number
                         </label>
                         <input
-                            type="email"
+                            type="tel"
+                            required
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
-                            placeholder="name@example.com"
+                            placeholder="Your phone number"
                         />
                     </div>
                     <div>
                         <label className="block text-xs uppercase tracking-wider text-white/60 mb-1">
-                            Guests
+                            Message
                         </label>
-                        <select className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors">
-                            <option value="1" className="bg-black">1 Guest</option>
-                            <option value="2" className="bg-black">2 Guests</option>
-                            <option value="3" className="bg-black">3 Guests</option>
-                            <option value="4" className="bg-black">4+ Guests</option>
-                        </select>
+                        <textarea
+                            rows="4"
+                            required
+                            className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
+                            placeholder="Your message"
+                        ></textarea>
                     </div>
 
-                    <button className="btn btn-primary w-full mt-4">
+                    <button type="submit" className="btn btn-primary w-full mt-4">
                         Confirm Request
                     </button>
+
+                    {success && (
+                        <div className="mt-3 text-[11px] tracking-[0.16em] uppercase text-rg-champ text-center flash-success">
+                            Message sent — we’ll contact you soon.
+                        </div>
+                    )}
                 </form>
             </div>
         </div>

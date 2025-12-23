@@ -18,6 +18,7 @@ export default function Home() {
       const response = await axios.post(`${API_URL}event-list`, {
         upcoming: true,
         status: 1,
+        limit: 10,
       });
       setFutureEvents(response?.data?.data?.events);
       // console.log("Event List:", response.data?.data?.events);
@@ -31,6 +32,7 @@ export default function Home() {
       const response = await axios.post(`${API_URL}event-list`, {
         past: true,
         status: 1,
+        limit: 3,
       });
       setPastEvents(response?.data?.data?.events);
       console.log("Event List:", response.data?.data?.events);

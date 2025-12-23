@@ -70,6 +70,7 @@ export default function Events({
         </div>
 
         {/* UPCOMING */}
+        {/* {futureEvents?.length > 0 && ( */}
         <div className="mb-12 reveal">
           <div className="flex items-center justify-between mb-4">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
@@ -138,8 +139,10 @@ export default function Events({
             ))}
           </Swiper>
         </div>
+        {/* )} */}
 
         {/* PAST EVENTS */}
+        {/* {pastEvents?.length > 0 && ( */}
         <div className="grid md:grid-cols-2 gap-10 reveal">
           <div>
             <div className="text-xs font-semibold tracking-[0.18em] uppercase text-[rgba(255,255,255,0.75)] mb-2">
@@ -166,6 +169,7 @@ export default function Events({
             ))}
           </div>
         </div>
+        {/* )} */}
       </div>
     </section>
   );

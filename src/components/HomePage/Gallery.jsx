@@ -1,3 +1,21 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
+
+const galleryImages = [
+  "/gallery1.jpg",
+  "/gallery2.jpg",
+  "/gallery3.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+  "/gallery4.jpg",
+];
+
 export default function Gallery() {
   return (
     <section id="gallery" className="py-16 md:py-20 bg-black">
@@ -11,20 +29,34 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="gallery-item reveal">
-            <img src="/gallery1.jpg" alt="" className="w-full h-44 object-cover rounded-xl bg-[#201010]" />
-          </div>
-          <div className="gallery-item reveal">
-            <img src="/gallery2.jpg" alt="" className="w-full h-44 object-cover rounded-xl bg-[#201010]" />
-          </div>
-          <div className="gallery-item reveal">
-            <img src="/gallery3.jpg" alt="" className="w-full h-44 object-cover rounded-xl bg-[#201010]" />
-          </div>
-          <div className="gallery-item reveal">
-            <img src="/gallery4.jpg" alt="" className="w-full h-44 object-cover rounded-xl bg-[#201010]" />
-          </div>
-        </div>
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={16}
+          slidesPerView={2}
+          loop={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: {
+              slidesPerView: 4,
+            },
+          }}
+          className="w-full"
+        >
+          {galleryImages.map((src, index) => (
+            <SwiperSlide key={index}>
+              <div className="gallery-item reveal">
+                <img
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-44 object-cover rounded-xl bg-[#201010]"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

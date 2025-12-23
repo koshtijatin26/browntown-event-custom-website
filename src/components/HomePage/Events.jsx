@@ -6,8 +6,13 @@ import { useBooking } from "../../context/BookingContext";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { API_URL } from "../../utils/constant";
+import { formatDateUS } from "../../utils/helper";
 
-export default function Events() {
+export default function Events({
+  futureEvents = [],
+  pastEvents = []
+}) {
   const { openBooking } = useBooking();
 
   // Reveal on scroll
@@ -85,140 +90,52 @@ export default function Events() {
             navigation
           >
             {/* SLIDE 1 */}
-            <SwiperSlide>
-              <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
-                <div className="relative">
-                  <img
-                    src="/event1.jpg"
-                    alt="Winter RoseGala"
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-xs text-white/90">
-                    <div className="event-tag">Dec 21 · Winter RoseGala</div>
-                    <div className="text-[0.9rem] font-semibold mt-1">
-                      Orchestra · Live Vocalists · DJ Afterparty
+            {futureEvents?.length > 0 && futureEvents?.map((event) => (
+              <SwiperSlide key={event.id}>
+                <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
+                  <div className="relative">
+                    <img
+                      src={`${API_URL}${event?.image}`}
+                      alt="Winter RoseGala"
+                      className="w-full h-64 md:h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-xs text-white/90">
+                      <div className="event-tag">{formatDateUS(event?.event_date)}</div>
+                      <div className="text-[0.9rem] font-semibold mt-1">
+                        {event?.venue}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
+                    <div>
+                      <div className="event-tag mb-2">{event?.highlights}</div>
+                      <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
+                        {event?.name}
+                      </h3>
+                      <p className="mt-3 text-[0.86rem] text-white/80">
+                        {event?.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between text-[11px]">
+                      <div className="text-white/75">
+                        From{" "}
+                        <span className="text-rg-champ font-semibold">${event?.price}</span>
+                      </div>
+                      <a
+                        target="_blank"
+                        className="btn btn-primary"
+                        href={event?.booking_url}
+                      >
+                        Book
+                      </a>
                     </div>
                   </div>
                 </div>
-
-                <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
-                  <div>
-                    <div className="event-tag mb-2">Featured Night</div>
-                    <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
-                      Winter RoseGala
-                    </h3>
-                    <p className="mt-3 text-[0.86rem] text-white/80">
-                      A cinematic gala night with live orchestral acts and a
-                      curated afterparty.
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex items-center justify-between text-[11px]">
-                    <div className="text-white/75">
-                      From{" "}
-                      <span className="text-rg-champ font-semibold">$120</span>
-                    </div>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => openBooking("Winter RoseGala · Dec 21")}
-                    >
-                      Book
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
-                <div className="relative">
-                  <img
-                    src="/event1.jpg"
-                    alt="Winter RoseGala"
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-xs text-white/90">
-                    <div className="event-tag">Dec 21 · Winter RoseGala</div>
-                    <div className="text-[0.9rem] font-semibold mt-1">
-                      Orchestra · Live Vocalists · DJ Afterparty
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
-                  <div>
-                    <div className="event-tag mb-2">Featured Night</div>
-                    <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
-                      Winter RoseGala
-                    </h3>
-                    <p className="mt-3 text-[0.86rem] text-white/80">
-                      A cinematic gala night with live orchestral acts and a
-                      curated afterparty.
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex items-center justify-between text-[11px]">
-                    <div className="text-white/75">
-                      From{" "}
-                      <span className="text-rg-champ font-semibold">$120</span>
-                    </div>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => openBooking("Winter RoseGala · Dec 21")}
-                    >
-                      Book
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
-                <div className="relative">
-                  <img
-                    src="/event1.jpg"
-                    alt="Winter RoseGala"
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4 text-xs text-white/90">
-                    <div className="event-tag">Dec 21 · Winter RoseGala</div>
-                    <div className="text-[0.9rem] font-semibold mt-1">
-                      Orchestra · Live Vocalists · DJ Afterparty
-                    </div>
-                  </div>
-                </div>
-
-                <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
-                  <div>
-                    <div className="event-tag mb-2">Featured Night</div>
-                    <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
-                      Winter RoseGala
-                    </h3>
-                    <p className="mt-3 text-[0.86rem] text-white/80">
-                      A cinematic gala night with live orchestral acts and a
-                      curated afterparty.
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex items-center justify-between text-[11px]">
-                    <div className="text-white/75">
-                      From{" "}
-                      <span className="text-rg-champ font-semibold">$120</span>
-                    </div>
-                    <button
-                      className="btn btn-primary"
-                      onClick={() => openBooking("Winter RoseGala · Dec 21")}
-                    >
-                      Book
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 
@@ -234,42 +151,19 @@ export default function Events() {
             </p>
           </div>
           <div className="timeline space-y-5 text-[0.85rem]">
-            <div className="flex gap-3 items-start">
-              <div className="mt-1 timeline-dot"></div>
-              <div>
-                <div className="text-rg-champ font-semibold">
-                  Autumn Velvet — Sep 2025
-                </div>
-                <div className="text-[rgba(255,255,255,0.7)]">
-                  A velvet-themed evening with string trio and live DJs. Sold
-                  out in 6 days.
-                </div>
-              </div>
-            </div>
-            <div className="flex gap-3 items-start">
-              <div className="mt-1 timeline-dot"></div>
-              <div>
-                <div className="text-rg-champ font-semibold">
-                  Summer Champagne Deck — Jul 2025
-                </div>
-                <div className="text-[rgba(255,255,255,0.7)]">
-                  Rooftop summer night featuring live vocal house, open-air
-                  terrace and champagne bar.
+            {pastEvents?.length > 0 && pastEvents?.map((event) => (
+              <div key={event.id} className="flex gap-3 items-start">
+                <div className="mt-1 timeline-dot"></div>
+                <div>
+                  <div className="text-rg-champ font-semibold">
+                    {event?.name} — {formatDateUS(event?.event_date)}
+                  </div>
+                  <div className="text-[rgba(255,255,255,0.7)]">
+                    {event?.description}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex gap-3 items-start">
-              <div className="mt-1 timeline-dot"></div>
-              <div>
-                <div className="text-rg-champ font-semibold">
-                  Spring Blush Session — Apr 2025
-                </div>
-                <div className="text-[rgba(255,255,255,0.7)]">
-                  An intimate indoor evening with a jazz trio and minimal-luxe
-                  staging.
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

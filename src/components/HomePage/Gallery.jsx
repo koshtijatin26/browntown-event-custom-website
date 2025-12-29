@@ -2,19 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const galleryImages = [
-  "/gallery1.jpg",
-  "/gallery2.jpg",
-  "/gallery3.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-  "/gallery4.jpg",
-];
+const galleryImages = Array.from({ length: 26 }, (_, i) => `/gallery/gallery_${i + 1}.jpg`);
 
 export default function Gallery() {
   return (
@@ -35,7 +23,7 @@ export default function Gallery() {
           slidesPerView={2}
           loop={true}
           autoplay={{
-            delay: 3000,
+            delay: 3400,
             disableOnInteraction: false,
           }}
           breakpoints={{

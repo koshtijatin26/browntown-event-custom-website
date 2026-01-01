@@ -1,19 +1,53 @@
 import { useState } from "react";
+import axios from "axios";
 import { useBooking } from "../context/BookingContext";
+import { API_URL } from "../utils/constant";
 
 export default function BookingModal() {
     const { isModalOpen, bookingTitle, closeBooking } = useBooking();
+    const [formData, setFormData] = useState({
+        name: "",
+        phone: "",
+        message: "",
+    });
+    const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(null);
 
     if (!isModalOpen) return null;
 
-    const handleSubmit = (e) => {
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSuccess(true);
-        setTimeout(() => {
-            setSuccess(false);
-            closeBooking();
-        }, 3000);
+        setLoading(true);
+        setError(null);
+        setSuccess(false);
+
+        try {
+            const response = await axios.post(`${API_URL}contact-create`, formData);
+            if (response.data.status) {
+                setSuccess(true);
+                setFormData({ name: "", phone: "", message: "" });
+                setTimeout(() => {
+                    setSuccess(false);
+                    closeBooking();
+                }, 3000);
+            } else {
+                setError(response.data.message || "Something went wrong.");
+            }
+        } catch (err) {
+            console.error("Error submitting booking request:", err);
+            setError("Failed to send request. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -52,6 +86,9 @@ export default function BookingModal() {
                         </label>
                         <input
                             type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
                             required
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
                             placeholder="Your full name"
@@ -63,7 +100,11 @@ export default function BookingModal() {
                         </label>
                         <input
                             type="tel"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
                             required
+                            maxLength={10}
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
                             placeholder="Your phone number"
                         />
@@ -73,15 +114,27 @@ export default function BookingModal() {
                             Message
                         </label>
                         <textarea
+                            name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                             rows="4"
-                            required
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
-                            placeholder="Your message"
+                            placeholder="Your message (optional)"
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="btn btn-primary w-full mt-4">
-                        Confirm Request
+                    {error && (
+                        <div className="text-red-500 text-xs tracking-wider uppercase text-center">
+                            {error}
+                        </div>
+                    )}
+
+                    <button
+                        type="submit"
+                        disabled={loading}
+                        className="btn btn-primary w-full mt-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                        {loading ? "Sending..." : "Confirm Request"}
                     </button>
 
                     {success && (

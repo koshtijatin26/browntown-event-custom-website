@@ -1,12 +1,46 @@
 import { useState } from "react";
+import axios from "axios";
+import { API_URL } from "../../utils/constant";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSuccess(true);
-    setTimeout(() => setSuccess(false), 3000);
+    setLoading(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      const response = await axios.post(`${API_URL}contact-create`, formData);
+      if (response.data.status) {
+        setSuccess(true);
+        setFormData({ name: "", phone: "", message: "" });
+        setTimeout(() => setSuccess(false), 5000);
+      } else {
+        setError(response.data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      console.error("Error submitting contact form:", err);
+      setError("Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -36,6 +70,9 @@ export default function Contact() {
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 required
                 className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
               />
@@ -46,34 +83,42 @@ export default function Contact() {
               </label>
               <input
                 type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
                 required
+                maxLength={10}
                 className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
               />
             </div>
           </div>
-          {/* <div>
-            <label className="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">
-              Subject
-            </label>
-            <input
-              type="text"
-              className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
-            />
-          </div> */}
           <div>
             <label className="text-[11px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)]">
               Message
             </label>
             <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               rows="5"
-              required
               className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
             ></textarea>
           </div>
+
+          {error && (
+            <div className="text-red-500 text-xs tracking-wider uppercase text-center">
+              {error}
+            </div>
+          )}
+
           <div className="flex items-center justify-between text-[11px] text-[rgba(255,255,255,0.65)]">
             <span>Or email: <span className="text-rg-champ">hello@rosegoldnights.example</span></span>
-            <button type="submit" className="btn btn-primary">
-              Send
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {loading ? "Sending..." : "Send"}
             </button>
           </div>
           {success && (

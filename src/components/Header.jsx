@@ -14,7 +14,7 @@ export default function Header() {
       <div id="preHeader" className="fixed top-0 left-0 right-0 z-50 pre-header">
         <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between">
           <a
-            href="mailto:hello@rosegoldnights.com"
+            href="mailto:info@browntownus.com"
             className="flex items-center gap-2 pre-link"
           >
             <svg
@@ -29,11 +29,23 @@ export default function Header() {
               <path d="M4 4h16v16H4z" />
               <path d="M22 6l-10 7L2 6" />
             </svg>
-            <span className="hidden sm:inline">hello@rosegoldnights.com</span>
+            <span className="hidden sm:inline">info@browntownus.com</span>
           </a>
 
           <div className="flex items-center gap-3">
-            <a href="#" className="social-icon" aria-label="Instagram">
+            <a href="tel:8326773213" className="social-icon" aria-label="Phone">
+              <svg
+                viewBox="0 0 24 24"
+                width="15"
+                height="15"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+              >
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.57A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/browntown.usa/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
               <svg
                 viewBox="0 0 24 24"
                 width="15"
@@ -48,7 +60,7 @@ export default function Header() {
               </svg>
             </a>
 
-            <a href="#" className="social-icon" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/15SPcn4EXg1/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
               <svg
                 viewBox="0 0 24 24"
                 width="15"
@@ -61,23 +73,6 @@ export default function Header() {
               </svg>
             </a>
 
-            <a href="#" className="social-icon" aria-label="Twitter">
-              <svg
-                viewBox="0 0 24 24"
-                width="15"
-                height="15"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.6"
-              >
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 12 8v1
-          A10.66 10.66 0 0 1 3 4s-4 9 5 13
-          a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5
-          a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-                />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
@@ -93,10 +88,10 @@ export default function Header() {
             </div>
             <div className="leading-tight">
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-rg-champ">
-                RoseGold Nights
+                BrownTown
               </div>
               <div className="text-[11px] text-[rgba(255,255,255,0.7)]">
-                Modern Glam Events
+                Paint the town brown!
               </div>
             </div>
           </a>
@@ -122,7 +117,7 @@ export default function Header() {
             </a>
             <button
               className="btn btn-primary ml-2"
-              onClick={() => openBooking('RoseGold Nights — Booking')}
+              onClick={() => openBooking('INQUIRIES & COLLABORATIONS')}
             >
               Book Now
             </button>
@@ -191,7 +186,7 @@ export default function Header() {
               <button
                 className="btn btn-primary w-full mt-2"
                 onClick={() => {
-                  openBooking('RoseGold Nights — Booking');
+                  openBooking('INQUIRIES & COLLABORATIONS');
                   closeMenu();
                 }}
               >

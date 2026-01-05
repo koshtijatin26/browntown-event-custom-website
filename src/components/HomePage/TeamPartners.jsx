@@ -4,7 +4,7 @@ export default function TeamPartners() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-8 text-center reveal parallax-soft" data-parallax-speed="0.05">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
-            TEAM & PARTNERS
+            TEAM & Sponsors
           </div>
           <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
             THE PEOPLE BEHIND THE SCENES
@@ -20,36 +20,36 @@ export default function TeamPartners() {
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-b from-rg-rose to-rg-copper"></div>
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Alexandra Hart</div>
+                  <div className="text-[0.85rem] font-semibold">Saloni Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
-                    Creative Director
+                    Founder & CEO
                   </div>
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f3e1d7] to-rg-rose"></div>
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Milan Carver</div>
+                  <div className="text-[0.85rem] font-semibold">Prachi Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
-                    Event Producer
+                    Director of Operations
                   </div>
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f5e4cf] to-rg-copper"></div>
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Riya Sen</div>
+                  <div className="text-[0.85rem] font-semibold">Parita Jadeja</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
-                    Hospitality Lead
+                    Head of Growth & Strategy
                   </div>
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f2dac7] to-rg-rose"></div>
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Jonas Wilde</div>
+                  <div className="text-[0.85rem] font-semibold">Keya Shah</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
-                    Lighting & Visuals
+                    Head of Public Relations
                   </div>
                 </div>
               </div>

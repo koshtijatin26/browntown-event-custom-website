@@ -4,19 +4,13 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
         <div className="reveal">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-3">
-            ABOUT ROSEGOLD NIGHTS
+            About BrownTown
           </div>
           <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ mb-4">
-            curated modern glam experiences
+            Turning culture into celebration
           </h2>
           <p className="text-[0.9rem] text-[rgba(255,255,255,0.8)] mb-4">
-            RoseGold Nights is a design-forward event label crafting intimate evenings with
-            premium sound, couture lighting and elevated hospitality. Every edition is a carefully
-            produced one-night experience — never repeated in the same form.
-          </p>
-          <p className="text-[0.9rem] text-[rgba(255,255,255,0.76)]">
-            From lineup curation to scent, glassware to light choreography — each detail is
-            tuned so guests feel like they stepped into a cinematic frame, not just a venue.
+            Browntown USA was created to give culture a stage and bring people together through music, identity, and community. What started as a small idea has grown into a movement built on creativity and unforgettable moments. Every event is intentional, from the themes to the lighting to the energy in the room. You are not just attending. You’re not just attending - you’re part of something bigger.
           </p>
         </div>
         <div className="reveal">

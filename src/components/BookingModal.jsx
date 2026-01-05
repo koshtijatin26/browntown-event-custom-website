@@ -76,7 +76,7 @@ export default function BookingModal() {
                     {bookingTitle}
                 </h3>
                 <p className="text-sm text-white/70 mb-6">
-                    Please fill out the form below to request your reservation.
+                    Have an idea, brand, or collab in mind? We’re listening.
                 </p>
 
                 <form className="space-y-4" onSubmit={handleSubmit}>

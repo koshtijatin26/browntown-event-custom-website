@@ -62,10 +62,10 @@ export default function Events({
             EVENTS
           </div>
           <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
-            Upcoming & Past Nights
+            Join us for a Browntown experience
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.7)] max-w-xl mx-auto">
-            Premium, small-capacity nights curated for sound, light, and detail.
+            Every event is a celebration — and you’re always invited!
           </p>
         </div>
 
@@ -141,16 +141,21 @@ export default function Events({
         </div>
         {/* )} */}
 
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
+            Another night is coming.
+          </div>
+          <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
+            Past editions
+          </div>
+        </div>
         {/* PAST EVENTS */}
         {/* {pastEvents?.length > 0 && ( */}
         <div className="grid md:grid-cols-2 gap-10 reveal">
           <div>
-            <div className="text-xs font-semibold tracking-[0.18em] uppercase text-[rgba(255,255,255,0.75)] mb-2">
-              PAST EDITIONS
-            </div>
             <p className="text-[0.9rem] text-[rgba(255,255,255,0.75)] max-w-md">
-              Each RoseGold Night is produced as a one-off experience. Here’s a
-              glimpse of where we've been.
+              The next Browntown night is in the works.
+              We’re building something special - stay tuned.
             </p>
           </div>
           <div className="timeline space-y-5 text-[0.85rem]">

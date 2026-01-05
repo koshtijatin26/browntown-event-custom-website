@@ -13,7 +13,7 @@ export default function Gallery() {
             GALLERY
           </div>
           <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
-            FRAGMENTS FROM THE NIGHT
+            PROOF OF THE VIBE
           </h2>
         </div>
 

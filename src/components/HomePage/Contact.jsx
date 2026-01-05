@@ -51,10 +51,12 @@ export default function Contact() {
             CONTACT
           </div>
           <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
-            REQUEST BOOKINGS & PRESS
+            INQUIRIES & COLLABORATIONS
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.75)]">
-            For private bookings, partnerships or media, leave a message and the team will respond.
+            For inquiries, partnerships, or collaborations - reach out and let’s talk..
+
+
           </p>
         </div>
 
@@ -112,7 +114,7 @@ export default function Contact() {
           )}
 
           <div className="flex items-center justify-between text-[11px] text-[rgba(255,255,255,0.65)]">
-            <span>Or email: <span className="text-rg-champ">hello@rosegoldnights.example</span></span>
+            <span>Or email: <a href="mailto:info@browntownus.com" className="text-rg-champ hover:text-rg-champ/80 transition-colors">info@browntownus.com</a></span>
             <button
               type="submit"
               disabled={loading}

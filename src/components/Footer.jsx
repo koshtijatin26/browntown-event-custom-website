@@ -5,10 +5,8 @@ export default function Footer() {
     <footer className="footer-premium">
       <div className="max-w-6xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-14">
         <div className="flex flex-col gap-6">
-          <a href="#hero" className="flex items-center gap-4">
-            <div className="footer-logo">
-              RG
-            </div>
+          <a href="/#hero" className="flex items-center gap-4">
+            <img src="/images/logo.png" alt="BrownTown Logo" className="w-16 object-contain rounded-xl" />
             <div>
               <div className="footer-title">BrownTown</div>
               <div className="footer-subtitle">Paint the town brown!</div>
@@ -37,11 +35,11 @@ export default function Footer() {
           <div>
             <div className="footer-heading">Company</div>
             <ul className="footer-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#events">Events</a></li>
-              <li><a href="#team">Team</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/#about">About</a></li>
+              <li><a href="/#events">Events</a></li>
+              <li><a href="/#team">Team</a></li>
+              <li><a href="/#gallery">Gallery</a></li>
+              <li><a href="/#contact">Contact</a></li>
             </ul>
           </div>
 

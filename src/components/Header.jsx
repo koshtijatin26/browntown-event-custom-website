@@ -82,10 +82,8 @@ export default function Header() {
         className="fixed top-0 left-0 right-0 z-40 header-blur"
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-          <a href="#hero" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-b from-rg-rose to-rg-copper flex items-center justify-center shadow-glam text-[#0b0606] font-bold text-xs tracking-[0.25em]">
-              RG
-            </div>
+          <a href="/#hero" className="flex items-center gap-3">
+            <img src="/images/logo.png" alt="BrownTown Logo" className="w-12 h-12 object-contain rounded-xl" />
             <div className="leading-tight">
               <div className="text-xs font-semibold uppercase tracking-[0.2em] text-rg-champ">
                 BrownTown
@@ -97,22 +95,22 @@ export default function Header() {
           </a>
 
           <nav className="hidden md:flex items-center gap-6 text-[11px] font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.7)]">
-            <a href="#hero" className="hover:text-rg-champ">
+            <a href="/#hero" className="hover:text-rg-champ">
               Home
             </a>
-            <a href="#events" className="hover:text-rg-champ">
+            <a href="/#events" className="hover:text-rg-champ">
               Events
             </a>
-            <a href="#about" className="hover:text-rg-champ">
+            <a href="/#about" className="hover:text-rg-champ">
               About
             </a>
-            <a href="#team" className="hover:text-rg-champ">
+            <a href="/#team" className="hover:text-rg-champ">
               Team
             </a>
-            <a href="#gallery" className="hover:text-rg-champ">
+            <a href="/#gallery" className="hover:text-rg-champ">
               Gallery
             </a>
-            <a href="#contact" className="hover:text-rg-champ">
+            <a href="/#contact" className="hover:text-rg-champ">
               Contact
             </a>
             <button
@@ -165,22 +163,22 @@ export default function Header() {
             className="md:hidden border-t border-[rgba(255,255,255,0.1)] bg-black/80"
           >
             <nav className="flex flex-col px-4 pt-2 pb-4 gap-2 text-[11px] tracking-[0.18em] uppercase text-[rgba(255,255,255,0.8)]">
-              <a href="#hero" className="py-2" onClick={closeMenu}>
+              <a href="/#hero" className="py-2" onClick={closeMenu}>
                 Home
               </a>
-              <a href="#events" className="py-2" onClick={closeMenu}>
+              <a href="/#events" className="py-2" onClick={closeMenu}>
                 Events
               </a>
-              <a href="#about" className="py-2" onClick={closeMenu}>
+              <a href="/#about" className="py-2" onClick={closeMenu}>
                 About
               </a>
-              <a href="#team" className="py-2" onClick={closeMenu}>
+              <a href="/#team" className="py-2" onClick={closeMenu}>
                 Team
               </a>
-              <a href="#gallery" className="py-2" onClick={closeMenu}>
+              <a href="/#gallery" className="py-2" onClick={closeMenu}>
                 Gallery
               </a>
-              <a href="#contact" className="py-2" onClick={closeMenu}>
+              <a href="/#contact" className="py-2" onClick={closeMenu}>
                 Contact
               </a>
               <button

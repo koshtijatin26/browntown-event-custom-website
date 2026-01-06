@@ -14,8 +14,7 @@ export default function Footer() {
           </a>
 
           <p className="footer-desc max-w-sm">
-            Curating unforgettable luxury experiences with modern glam,
-            artistic elegance, and premium event production.
+            Browntown, where culture shows up, music sets the tone, and unforgettable energy turns the night into a celebration.
           </p>
 
           <div className="footer-socials">

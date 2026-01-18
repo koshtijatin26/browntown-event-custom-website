@@ -14,10 +14,18 @@ export default function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (name === "phone") {
+      const numericValue = value.replace(/[^0-9]/g, "");
+      setFormData((prev) => ({
+        ...prev,
+        [name]: numericValue,
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -54,7 +62,7 @@ export default function Contact() {
             INQUIRIES & COLLABORATIONS
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.75)]">
-            For inquiries, partnerships, or collaborations - reach out and let’s talk..
+            For inquiries, partnerships, or collaborations - reach out and let’s talk
 
 
           </p>
@@ -89,7 +97,6 @@ export default function Contact() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                maxLength={10}
                 className="mt-1 w-full rounded-lg bg-black/60 border border-[rgba(255,255,255,0.25)] px-3 py-2 text-sm text-white focus:outline-none focus:ring-1 focus:ring-rg-rose"
               />
             </div>

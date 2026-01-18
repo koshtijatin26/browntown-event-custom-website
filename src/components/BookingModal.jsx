@@ -18,10 +18,18 @@ export default function BookingModal() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({
-            ...prev,
-            [name]: value,
-        }));
+        if (name === "phone") {
+            const numericValue = value.replace(/[^0-9]/g, "");
+            setFormData((prev) => ({
+                ...prev,
+                [name]: numericValue,
+            }));
+        } else {
+            setFormData((prev) => ({
+                ...prev,
+                [name]: value,
+            }));
+        }
     };
 
     const handleSubmit = async (e) => {
@@ -104,7 +112,6 @@ export default function BookingModal() {
                             value={formData.phone}
                             onChange={handleChange}
                             required
-                            maxLength={10}
                             className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-rg-rose transition-colors"
                             placeholder="Your phone number"
                         />

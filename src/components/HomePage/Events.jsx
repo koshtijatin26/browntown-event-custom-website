@@ -76,9 +76,9 @@ export default function Events({
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
               UPCOMING
             </div>
-            <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
+            {/* <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
               Limited seats · Advance only
-            </div>
+            </div> */}
           </div>
 
           <Swiper
@@ -145,9 +145,9 @@ export default function Events({
           <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
             Another night is coming.
           </div>
-          <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
+          {/* <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
             Past editions
-          </div>
+          </div> */}
         </div>
         {/* PAST EVENTS */}
         {/* {pastEvents?.length > 0 && ( */}

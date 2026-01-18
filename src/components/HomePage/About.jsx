@@ -14,33 +14,11 @@ export default function About() {
           </p>
         </div>
         <div className="reveal">
-          <div className="metal-border">
-            <div className="metal-inner p-5">
-              <div className="text-xs tracking-[0.18em] uppercase text-[rgba(255,255,255,0.7)] mb-2">
-                BY THE NUMBERS
-              </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div className="text-rg-champ font-semibold text-lg">25+</div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)] mt-1">
-                    Nights
-                  </div>
-                </div>
-                <div>
-                  <div className="text-rg-champ font-semibold text-lg">5</div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)] mt-1">
-                    Cities
-                  </div>
-                </div>
-                <div>
-                  <div className="text-rg-champ font-semibold text-lg">4.9★</div>
-                  <div className="text-[10px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.6)] mt-1">
-                    Guest rating
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img
+            src="/images/team_members.png"
+            alt="Team Members"
+            className="w-full h-auto object-cover rounded-lg opacity-80 hover:opacity-100 transition-opacity duration-500"
+          />
         </div>
       </div>
     </section>

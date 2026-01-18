@@ -62,11 +62,16 @@ export default function TeamPartners() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <span className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
-                  Maison&nbsp;Noir
-                </span>
+                <a href="https://www.desidistrict.com" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
+                  Desi District
+                </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
+                <a href="https://www.instagram.com/sevenheaven_smokeshop?igsh=aHMxc2RzdWxvdWt3" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
+                  Seven Heaven
+                </a>
+              </div>
+              {/* <div className="event-card p-3 flex items-center justify-center bg-black/70">
                 <span className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
                   Lumière
                 </span>
@@ -90,7 +95,7 @@ export default function TeamPartners() {
                 <span className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
                   Vino&nbsp;Roseé
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

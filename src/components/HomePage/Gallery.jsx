@@ -23,12 +23,12 @@ export default function Gallery() {
           slidesPerView={2}
           loop={true}
           autoplay={{
-            delay: 3400,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           breakpoints={{
             768: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
           }}
           className="w-full"

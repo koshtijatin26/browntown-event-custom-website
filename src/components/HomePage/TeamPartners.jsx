@@ -2,7 +2,7 @@ export default function TeamPartners() {
   return (
     <section id="team" className="py-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-8 text-center reveal parallax-soft" data-parallax-speed="0.05">
+        <div className="mb-4 md:mb-8 text-center reveal parallax-soft" data-parallax-speed="0.05">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             TEAM & Sponsors
           </div>

@@ -8,7 +8,7 @@ export default function Gallery() {
   return (
     <section id="gallery" className="py-16 md:py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="mb-8 text-center reveal parallax-soft" data-parallax-speed="0.04">
+        <div className="mb-4 md:mb-8 text-center reveal parallax-soft" data-parallax-speed="0.04">
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             GALLERY
           </div>

@@ -38,7 +38,7 @@ export default function TeamPartners() {
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
                 <img src="/images/team/parita.jpeg" alt="Parita Jadeja" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f5e4cf] to-rg-copper" />
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Parita Jadeja</div>
+                  <div className="text-[0.85rem] font-semibold">Paritaba Jadeja</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
                     Head of Growth & Strategy
                   </div>

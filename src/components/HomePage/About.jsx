@@ -10,7 +10,9 @@ export default function About() {
             Turning culture into celebration
           </h2>
           <p className="text-[0.9rem] text-[rgba(255,255,255,0.8)] mb-4">
-            Browntown USA was created to give culture a stage and bring people together through music, identity, and community. What started as a small idea has grown into a movement built on creativity and unforgettable moments. Every event is intentional, from the themes to the lighting to the energy in the room. You are not just attending. You’re not just attending - you’re part of something bigger.
+            Browntown was created to give culture a stage.
+            <br />
+            We design high-energy experiences driven by music, identity, and community. Where every detail is intentional and every night feels unforgettable. This isn’t just a party. It’s a BrownTown experience.
           </p>
         </div>
         <div className="reveal">

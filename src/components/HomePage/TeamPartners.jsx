@@ -18,7 +18,7 @@ export default function TeamPartners() {
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-rg-rose to-rg-copper"></div>
+                <img src="/images/team/saloni.jpeg" alt="Saloni Dave" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-rg-rose to-rg-copper" />
                 <div>
                   <div className="text-[0.85rem] font-semibold">Saloni Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
@@ -27,7 +27,7 @@ export default function TeamPartners() {
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f3e1d7] to-rg-rose"></div>
+                <img src="/images/team/prachi.jpeg" alt="Prachi Dave" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f3e1d7] to-rg-rose" />
                 <div>
                   <div className="text-[0.85rem] font-semibold">Prachi Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
@@ -36,7 +36,7 @@ export default function TeamPartners() {
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f5e4cf] to-rg-copper"></div>
+                <img src="/images/team/parita.jpeg" alt="Parita Jadeja" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f5e4cf] to-rg-copper" />
                 <div>
                   <div className="text-[0.85rem] font-semibold">Parita Jadeja</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
@@ -45,7 +45,7 @@ export default function TeamPartners() {
                 </div>
               </div>
               <div className="event-card p-4 flex items-center gap-3 bg-black/80">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#f2dac7] to-rg-rose"></div>
+                <img src="/images/team/keya.jpeg" alt="Keya Shah" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f2dac7] to-rg-rose" />
                 <div>
                   <div className="text-[0.85rem] font-semibold">Keya Shah</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">

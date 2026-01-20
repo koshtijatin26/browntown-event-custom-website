@@ -115,12 +115,11 @@ export default function Header() {
             </a>
             <button
               className="btn btn-primary ml-2"
-              onClick={() => openBooking('INQUIRIES & COLLABORATIONS')}
+              onClick={() => openBooking('RoseGold Nights — Featured Booking')}
             >
               Book Now
             </button>
           </nav>
-
           <button
             id="menuToggle"
             className="md:hidden p-1 text-rg-champ"
@@ -184,7 +183,7 @@ export default function Header() {
               <button
                 className="btn btn-primary w-full mt-2"
                 onClick={() => {
-                  openBooking('INQUIRIES & COLLABORATIONS');
+                  openBooking('RoseGold Nights — Featured Booking');
                   closeMenu();
                 }}
               >

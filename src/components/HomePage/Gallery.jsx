@@ -12,7 +12,7 @@ export default function Gallery() {
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             GALLERY
           </div>
-          <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
             PROOF OF THE VIBE
           </h2>
         </div>

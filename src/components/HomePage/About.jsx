@@ -6,7 +6,7 @@ export default function About() {
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-3">
             About BrownTown
           </div>
-          <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ mb-4">
+          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ mb-4">
             Turning culture into celebration
           </h2>
           <p className="text-[0.9rem] text-[rgba(255,255,255,0.8)] mb-4">

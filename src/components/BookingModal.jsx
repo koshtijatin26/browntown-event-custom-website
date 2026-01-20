@@ -61,7 +61,7 @@ export default function BookingModal() {
     return (
         <div className="modal-bg modal-open z-[60]" onClick={closeBooking}>
             <div
-                className="modal-panel relative"
+                className="modal-panel relative m-4 md:m-0"
                 onClick={(e) => e.stopPropagation()}
             >
                 <button
@@ -80,7 +80,7 @@ export default function BookingModal() {
                     </svg>
                 </button>
 
-                <h3 className="text-xl font-glam uppercase tracking-[0.15em] text-rg-champ mb-2">
+                <h3 className="text-xs md:text-2xl font-glam uppercase tracking-[0.15em] text-rg-champ mb-2">
                     {bookingTitle}
                 </h3>
                 <p className="text-sm text-white/70 mb-6">

@@ -58,7 +58,7 @@ export default function Contact() {
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             CONTACT
           </div>
-          <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
             INQUIRIES & COLLABORATIONS
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.75)]">

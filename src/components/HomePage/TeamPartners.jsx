@@ -6,7 +6,7 @@ export default function TeamPartners() {
           <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             TEAM & Sponsors
           </div>
-          <h2 className="font-glam font-semibold text-xl md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
             THE PEOPLE BEHIND THE SCENES
           </h2>
         </div>
@@ -62,13 +62,19 @@ export default function TeamPartners() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://www.desidistrict.com" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
-                  Desi District
+                <a href="https://www.desidistrict.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                  <img src="/images/sponsor/desidistrict.png" alt="Desi District" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
+                  <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
+                    Desi District
+                  </span>
                 </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://www.instagram.com/sevenheaven_smokeshop?igsh=aHMxc2RzdWxvdWt3" target="_blank" rel="noopener noreferrer" className="text-[0.8rem] tracking-[0.18em] uppercase text-rg-champ">
-                  Seven Heaven
+                <a href="https://www.instagram.com/sevenheaven_smokeshop?igsh=aHMxc2RzdWxvdWt3" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                  <img src="/images/sponsor/seven.jpg" alt="Seven Heaven" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity rounded-sm" />
+                  <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
+                    Seven Heaven
+                  </span>
                 </a>
               </div>
               {/* <div className="event-card p-3 flex items-center justify-center bg-black/70">

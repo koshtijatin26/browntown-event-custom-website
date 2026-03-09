@@ -16,28 +16,16 @@ export default function HeroVideo() {
 
   return (
     <>
-      {/* Desktop Video */}
+      {/* Desktop & Mobile Video */}
       <video
         ref={(el) => (videoRefs.current[0] = el)}
-        className="hidden lg:block absolute inset-0 w-full h-full object-fill"
+        className="absolute inset-0 w-full h-full object-cover"
         muted
         loop
         playsInline
         autoPlay
       >
-        <source src="/video/Pc.mp4" type="video/mp4" />
-      </video>
-
-      {/* Mobile Video */}
-      <video
-        ref={(el) => (videoRefs.current[1] = el)}
-        className="block lg:hidden absolute inset-0 w-full h-full object-fill"
-        muted
-        loop
-        playsInline
-        autoPlay
-      >
-        <source src="/video/Mobile.mp4" type="video/mp4" />
+        <source src="/video/home.mp4" type="video/mp4" />
       </video>
     </>
   );

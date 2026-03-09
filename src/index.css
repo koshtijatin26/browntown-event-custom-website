@@ -21,7 +21,7 @@
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
       "Helvetica Neue", Arial;
     background: radial-gradient(circle at top,
-        #241010 0,
+        #1a1a1a 0,
         #050404 55%,
         #000 100%);
     color: #f7f2ec;
@@ -61,21 +61,16 @@
   .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at top,
-        rgba(207, 168, 154, 0.45),
-        transparent 55%),
-      radial-gradient(circle at bottom,
-        rgba(185, 127, 114, 0.35),
-        transparent 60%),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.8), #050404 80%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4), #050404 90%);
+    pointer-events: none;
   }
 
   .hero-glass {
     background: radial-gradient(circle at top,
-        rgba(255, 255, 255, 0.2),
-        rgba(0, 0, 0, 0.85));
+        rgba(255, 255, 255, 0.08),
+        rgba(0, 0, 0, 0.95));
     border-radius: 22px;
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 40px 140px rgba(0, 0, 0, 1);
     position: relative;
     overflow: hidden;
@@ -91,7 +86,7 @@
     height: 380px;
     border-radius: 999px;
     background: radial-gradient(circle,
-        rgba(207, 168, 154, 0.55),
+        rgba(255, 255, 255, 0.1),
         transparent 65%);
     top: -150px;
     left: 50%;

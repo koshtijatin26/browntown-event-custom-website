@@ -7,10 +7,10 @@ export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
 
-      {/* <HeroVideo /> */}
+      <HeroVideo />
       <div className="hero-overlay"></div>
 
-      <div className="relative z-10 max-w-3xl w-full px-4">
+      {/* <div className="relative z-10 max-w-3xl w-full px-4">
         <div className="hero-glass hero-spotlight parallax-soft text-center px-6 py-10 md:px-10 md:py-14" data-parallax-speed="0.15">
           <div className="hero-headline text-[rgba(255,255,255,0.75)] mb-3">
             LIMITED SERIES · 2025
@@ -34,7 +34,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }

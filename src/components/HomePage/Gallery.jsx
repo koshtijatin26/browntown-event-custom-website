@@ -19,7 +19,7 @@ export default function Gallery() {
 
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={16}
+          spaceBetween={24}
           slidesPerView={2}
           loop={true}
           autoplay={{
@@ -29,9 +29,14 @@ export default function Gallery() {
           breakpoints={{
             768: {
               slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 32,
             },
           }}
-          className="w-full"
+          className="w-full pb-10"
         >
           {galleryImages.map((src, index) => (
             <SwiperSlide key={index}>
@@ -39,7 +44,7 @@ export default function Gallery() {
                 <img
                   src={src}
                   alt={`Gallery ${index + 1}`}
-                  className="w-full h-44 object-cover rounded-xl bg-[#201010]"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl bg-[#1a0f0f] shadow-2xl transition-all duration-500"
                 />
               </div>
             </SwiperSlide>

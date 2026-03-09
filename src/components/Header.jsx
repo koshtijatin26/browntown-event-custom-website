@@ -115,7 +115,7 @@ export default function Header() {
             </a>
             <button
               className="btn btn-primary ml-2"
-              onClick={() => openBooking('INQUIRIES & COLLABORATIONS')}
+              onClick={() => openBooking('Let’s Paint the Town Brown')}
             >
               Book Now
             </button>

@@ -84,7 +84,7 @@ export default function BookingModal() {
                     {bookingTitle}
                 </h3>
                 <p className="text-sm text-white/70 mb-6">
-                    Have an idea, brand, or collab in mind? We’re listening.
+                    Have an idea or collaboration in mind? Let’s talk
                 </p>
 
                 <form className="space-y-4" onSubmit={handleSubmit}>

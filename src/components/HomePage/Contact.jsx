@@ -59,7 +59,7 @@ export default function Contact() {
             CONTACT
           </div>
           <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
-            INQUIRIES & COLLABORATIONS
+            Let’s Paint the Town Brown
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.75)]">
             For inquiries, partnerships, or collaborations - reach out and let’s talk

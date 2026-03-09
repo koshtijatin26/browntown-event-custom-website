@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="hero-actions mt-7 flex items-center justify-center gap-3 flex-wrap">
             <button
               className="btn btn-primary"
-              onClick={() => openBooking('INQUIRIES & COLLABORATIONS')}
+              onClick={() => openBooking('Let’s Paint the Town Brown')}
             >
               Book Now
             </button>

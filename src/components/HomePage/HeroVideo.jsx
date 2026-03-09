@@ -19,7 +19,7 @@ export default function HeroVideo() {
       {/* Desktop & Mobile Video */}
       <video
         ref={(el) => (videoRefs.current[0] = el)}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 lg:static w-full h-[100svh] lg:h-auto object-cover lg:object-contain"
         muted
         loop
         playsInline

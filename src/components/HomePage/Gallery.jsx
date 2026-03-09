@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const galleryImages = Array.from({ length: 26 }, (_, i) => `/gallery/gallery_${i + 1}.jpg`);
+const galleryImages = Array.from({ length: 32 }, (_, i) => `/gallery/gallery_${i + 1}.jpg`);
 
 export default function Gallery() {
   return (

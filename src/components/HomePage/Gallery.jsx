@@ -2,9 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const galleryImages = Array.from({ length: 32 }, (_, i) => `/gallery/gallery_${i + 1}.jpg`);
+import { API_URL } from "../../utils/constant";
 
-export default function Gallery() {
+export default function Gallery({ galleryImages = [] }) {
   return (
     <section id="gallery" className="py-16 md:py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4">
@@ -17,12 +17,13 @@ export default function Gallery() {
           </h2>
         </div>
 
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={24}
-          slidesPerView={2}
-          loop={true}
-          autoplay={{
+        {galleryImages.length > 0 ? (
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={24}
+            slidesPerView={2}
+            loop={galleryImages.length > 4} // Only loop if there are enough images
+            autoplay={{
             delay: 2000,
             disableOnInteraction: false,
           }}
@@ -38,18 +39,21 @@ export default function Gallery() {
           }}
           className="w-full pb-10"
         >
-          {galleryImages.map((src, index) => (
-            <SwiperSlide key={index}>
-              <div className="gallery-item reveal">
-                <img
-                  src={src}
+            {galleryImages.map((imgObj, index) => (
+              <SwiperSlide key={imgObj.id || index}>
+                <div className="gallery-item reveal visible" style={{ opacity: 1, transform: 'none' }}>
+                  <img
+                  src={imgObj.image.startsWith("http") ? imgObj.image : `${API_URL.replace('/api/', '/')}${imgObj.image.startsWith('uploads/') ? 'api/' + imgObj.image : imgObj.image}`}
                   alt={`Gallery ${index + 1}`}
                   className="w-full aspect-[4/5] object-cover rounded-2xl bg-[#1a0f0f] shadow-2xl transition-all duration-500"
                 />
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <div className="text-center text-white pb-10">Loading gallery...</div>
+        )}
       </div>
     </section>
   );

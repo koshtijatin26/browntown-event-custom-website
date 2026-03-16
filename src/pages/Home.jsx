@@ -11,6 +11,7 @@ import TeamPartners from "../components/HomePage/TeamPartners";
 export default function Home() {
   const [futureEvents, setFutureEvents] = useState([]);
   const [pastEvents, setPastEvents] = useState([]);
+  const [gallery, setGallery] = useState([]);
   const didFetch = useRef(false);
 
   const fetchFutureEvents = async () => {
@@ -41,10 +42,20 @@ export default function Home() {
     }
   };
 
+  const fetchGallery = async () => {
+    try {
+      const response = await axios.post(`${API_URL}gallery-list`);
+      setGallery(response?.data?.data || []);
+    } catch (error) {
+      console.error("Error fetching gallery:", error);
+    }
+  };
+
   useEffect(() => {
     if (didFetch.current) return;
     fetchFutureEvents();
     fetchPastEvents();
+    fetchGallery();
     didFetch.current = true;
   }, []);
 
@@ -53,7 +64,7 @@ export default function Home() {
     <Events futureEvents={futureEvents} pastEvents={pastEvents} />
     <About />
     <TeamPartners />
-    <Gallery />
+    <Gallery galleryImages={gallery} />
     <Contact />
   </>)
 }

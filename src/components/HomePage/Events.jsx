@@ -77,7 +77,7 @@ export default function Events({
               Upcoming Events
             </div>
             <p className="text-[0.9rem] text-[rgba(255,255,255,0.75)]">
-              A look at past BrownTown takeovers filled with music, culture and high energy.
+              The next Browntown night is in the works. We’re building something special - stay tuned!
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function Events({
                 <div className="mt-1 timeline-dot"></div>
                 <div>
                   <div className="text-rg-champ font-semibold">
-                    {event?.name} — {formatDateUS(event?.event_date)}
+                    {event?.name} — {formatDateUS(event?.event_date, true)}
                   </div>
                   <div className="text-[rgba(255,255,255,0.7)]">
                     {event?.description}

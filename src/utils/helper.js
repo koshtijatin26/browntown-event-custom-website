@@ -1,12 +1,15 @@
-export const formatDateUS = (dateString) => {
+export const formatDateUS = (dateString, hideTime = false) => {
     if (!dateString) return "";
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat("en-US", {
+    const options = {
         month: "short",
         day: "numeric",
         year: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        hour12: true,
-    }).format(date);
+    };
+    if (!hideTime) {
+        options.hour = "numeric";
+        options.minute = "numeric";
+        options.hour12 = true;
+    }
+    return new Intl.DateTimeFormat("en-US", options).format(date);
 };

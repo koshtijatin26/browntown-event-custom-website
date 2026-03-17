@@ -78,7 +78,7 @@ export default function TeamPartners() {
                 </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="#" className="flex flex-col items-center gap-2 group">
+                <a href="https://www.instagram.com/tgnhtx?igsh=NXo2MWp5cTkzNXRu" className="flex flex-col items-center gap-2 group">
                   <img src="/images/sponsor/thegrandnest.jpeg" alt="The Grand Nest" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity rounded-sm" />
                   <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
                     The Grand Nest
@@ -86,7 +86,7 @@ export default function TeamPartners() {
                 </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://jaybhavanivadapav.com/" className="flex flex-col items-center gap-2 group">
+                <a href="https://www.instagram.com/jaybhavani_houston?igsh=MWhkM2lubTViOHltaQ==" className="flex flex-col items-center gap-2 group">
                   <img src="/images/sponsor/jaibhavani.jpeg" alt="Jai Bhavani" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity rounded-sm" />
                   <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
                     Jai Bhavani

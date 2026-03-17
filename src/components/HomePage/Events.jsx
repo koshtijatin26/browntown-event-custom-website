@@ -37,6 +37,10 @@ export default function Events({
   useEffect(() => {
     const els = document.querySelectorAll(".parallax-soft");
     const onScroll = () => {
+      if (window.innerWidth < 768) {
+        els.forEach((el) => (el.style.transform = "none"));
+        return;
+      }
       const y = window.scrollY;
       els.forEach((el) => {
         const speed = parseFloat(el.dataset.parallaxSpeed || "0.1");

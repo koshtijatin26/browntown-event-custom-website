@@ -58,14 +58,14 @@ export default function Events({
           className="text-center mb-10 reveal parallax-soft"
           data-parallax-speed="0.06"
         >
-          <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             EVENTS
           </div>
-          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">
             Join us for a Browntown experience
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.7)] max-w-xl mx-auto">
-            Every event is a celebration — and you’re always invited!
+            Every event is a celebration and you’re always invited!
           </p>
         </div>
 
@@ -74,11 +74,11 @@ export default function Events({
         <div className="mb-12 reveal">
           <div className="flex items-center justify-between mb-4">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
-              UPCOMING
+              Upcoming Events
             </div>
-            {/* <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
-              Limited seats · Advance only
-            </div> */}
+            <p className="text-[0.9rem] text-[rgba(255,255,255,0.75)]">
+              A look at past BrownTown takeovers filled with music, culture and high energy.
+            </p>
           </div>
 
           <Swiper
@@ -143,7 +143,7 @@ export default function Events({
 
         <div className="flex items-center justify-between mb-4">
           <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
-            Another night is coming.
+            Past Events
           </div>
           {/* <div className="text-[11px] tracking-[0.16em] uppercase text-[rgba(255,255,255,0.5)]">
             Past editions
@@ -154,8 +154,7 @@ export default function Events({
         <div className="grid md:grid-cols-2 gap-10 reveal">
           <div>
             <p className="text-[0.9rem] text-[rgba(255,255,255,0.75)] max-w-md">
-              The next Browntown night is in the works.
-              We’re building something special - stay tuned.
+              A look at past BrownTown takeovers filled with music, culture and high energy.
             </p>
           </div>
           <div className="timeline space-y-5 text-[0.85rem]">
@@ -176,6 +175,6 @@ export default function Events({
         </div>
         {/* )} */}
       </div>
-    </section>
+    </section >
   );
 }

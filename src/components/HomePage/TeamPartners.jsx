@@ -3,11 +3,11 @@ export default function TeamPartners() {
     <section id="team" className="py-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-4 md:mb-8 text-center reveal parallax-soft" data-parallax-speed="0.05">
-          <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
-            TEAM & Sponsors
+          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+            The Event Architects
           </div>
-          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
-            THE PEOPLE BEHIND THE SCENES
+          <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">
+            Turning ideas into celebrations
           </h2>
         </div>
 

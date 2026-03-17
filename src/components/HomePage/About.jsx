@@ -3,10 +3,10 @@ export default function About() {
     <section id="about" className="py-16 md:py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-8 items-center">
         <div className="reveal">
-          <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-3">
+          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-3">
             About BrownTown
           </div>
-          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ mb-4">
+          <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ mb-4">
             Turning culture into celebration
           </h2>
           <p className="text-[0.9rem] text-[rgba(255,255,255,0.8)] mb-4">

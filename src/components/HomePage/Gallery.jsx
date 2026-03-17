@@ -9,10 +9,10 @@ export default function Gallery({ galleryImages = [] }) {
     <section id="gallery" className="py-16 md:py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-4 md:mb-8 text-center reveal parallax-soft" data-parallax-speed="0.04">
-          <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             GALLERY
           </div>
-          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">
             PROOF OF THE VIBE
           </h2>
         </div>

@@ -195,7 +195,7 @@ export default function Header() {
               <button
                 className="btn btn-primary w-full mt-2"
                 onClick={() => {
-                  openBooking('RoseGold Nights — Featured Booking');
+                  openBooking('Let’s Paint the Town Brown');
                   closeMenu();
                 }}
               >

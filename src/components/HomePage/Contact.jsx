@@ -55,14 +55,14 @@ export default function Contact() {
     <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-8 reveal">
-          <div className="text-xs font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             CONTACT
           </div>
-          <h2 className="font-glam font-semibold text-xs md:text-2xl tracking-[0.22em] uppercase text-rg-champ">
+          <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">
             Let’s Paint the Town Brown
           </h2>
           <p className="mt-3 text-[0.9rem] text-[rgba(255,255,255,0.75)]">
-            For inquiries, partnerships, or collaborations - reach out and let’s talk
+            For inquiries or collaborations - reach out and let’s talk
 
 
           </p>

@@ -52,10 +52,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
+    <section id="contact" className="pt-0 pb-16 md:py-20 bg-gradient-to-b from-black via-[#120707] to-black">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-8 reveal">
-          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          <div className="text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             CONTACT
           </div>
           <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">

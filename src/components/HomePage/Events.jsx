@@ -62,7 +62,7 @@ export default function Events({
           className="text-center mb-10 reveal parallax-soft"
           data-parallax-speed="0.06"
         >
-          <div className="text-xs md:text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
+          <div className="text-2xl font-semibold tracking-[0.22em] uppercase text-rg-rose mb-2">
             EVENTS
           </div>
           <h2 className="font-glam font-semibold text-xs tracking-[0.22em] uppercase text-rg-champ">
@@ -76,7 +76,7 @@ export default function Events({
         {/* UPCOMING */}
         {/* {futureEvents?.length > 0 && ( */}
         <div className="mb-12 reveal">
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4 md:gap-0">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
               Upcoming Events
             </div>
@@ -116,7 +116,7 @@ export default function Events({
                   <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
                     <div>
                       <div className="event-tag mb-2">{event?.highlights}</div>
-                      <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[0.9rem] text-rg-champ">
+                      <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[1.3rem] text-rg-champ">
                         {event?.name}
                       </h3>
                       <p className="mt-3 text-[0.86rem] text-white/80">
@@ -124,10 +124,10 @@ export default function Events({
                       </p>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between text-[11px]">
+                    <div className="mt-4 flex items-center justify-between text-[14px]">
                       <div className="text-white/75">
                         From{" "}
-                        <span className="text-rg-champ font-semibold">${event?.price}</span>
+                        <span className="text-rg-champ font-semibold text-[22px]">${event?.price}</span>
                       </div>
                       <a
                         target="_blank"

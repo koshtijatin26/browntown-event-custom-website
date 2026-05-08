@@ -17,42 +17,42 @@ export default function TeamPartners() {
               Team
             </div>
             <div className="grid sm:grid-cols-2 gap-4">
-              <div className="event-card p-4 flex items-center gap-3 bg-black/80">
+              <a href="https://www.instagram.com/saloni.daveee?igsh=NTZhNHRjaHFzczJ0&utm_source=qr" target="_blank" rel="noopener noreferrer" className="event-card p-4 flex items-center gap-3 bg-black/80 hover:bg-black/60 transition-colors cursor-pointer group">
                 <img src="/images/team/saloni.jpeg" alt="Saloni Dave" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-rg-rose to-rg-copper" />
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Saloni Dave</div>
+                  <div className="text-[0.85rem] font-semibold group-hover:text-rg-champ transition-colors">Saloni Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
                     Founder & CEO
                   </div>
                 </div>
-              </div>
-              <div className="event-card p-4 flex items-center gap-3 bg-black/80">
+              </a>
+              <a href="https://www.instagram.com/prachi_davee?igsh=MXN0a3ljYzdmZGU0NQ==" target="_blank" rel="noopener noreferrer" className="event-card p-4 flex items-center gap-3 bg-black/80 hover:bg-black/60 transition-colors cursor-pointer group">
                 <img src="/images/team/prachi.jpeg" alt="Prachi Dave" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f3e1d7] to-rg-rose" />
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Prachi Dave</div>
+                  <div className="text-[0.85rem] font-semibold group-hover:text-rg-champ transition-colors">Prachi Dave</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
                     Director of Operations
                   </div>
                 </div>
-              </div>
-              <div className="event-card p-4 flex items-center gap-3 bg-black/80">
+              </a>
+              <a href="https://www.instagram.com/paritajadeja?igsh=czZoNnp6M2N0c3Rp" target="_blank" rel="noopener noreferrer" className="event-card p-4 flex items-center gap-3 bg-black/80 hover:bg-black/60 transition-colors cursor-pointer group">
                 <img src="/images/team/parita.jpeg" alt="Parita Jadeja" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f5e4cf] to-rg-copper" />
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Paritaba Jadeja</div>
+                  <div className="text-[0.85rem] font-semibold group-hover:text-rg-champ transition-colors">Paritaba Jadeja</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
                     Head of Growth & Strategy
                   </div>
                 </div>
-              </div>
-              <div className="event-card p-4 flex items-center gap-3 bg-black/80">
+              </a>
+              <a href="https://www.instagram.com/keya._.shah?igsh=MXY0cmVjajlsdG9wcw==" target="_blank" rel="noopener noreferrer" className="event-card p-4 flex items-center gap-3 bg-black/80 hover:bg-black/60 transition-colors cursor-pointer group">
                 <img src="/images/team/keya.jpeg" alt="Keya Shah" className="w-12 h-12 rounded-full object-cover bg-gradient-to-b from-[#f2dac7] to-rg-rose" />
                 <div>
-                  <div className="text-[0.85rem] font-semibold">Keya Shah</div>
+                  <div className="text-[0.85rem] font-semibold group-hover:text-rg-champ transition-colors">Keya Shah</div>
                   <div className="text-[10px] uppercase tracking-[0.16em] text-[rgba(255,255,255,0.65)]">
                     Head of Public Relations
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -62,7 +62,7 @@ export default function TeamPartners() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://www.desidistrict.com" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
+                <a href="https://www.instagram.com/sevenheaven07.shop?igsh=ZDF3OHkybDBsaDFj" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <img src="/images/sponsor/desidistrict.png" alt="Desi District" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity" />
                   <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
                     Desi District
@@ -78,7 +78,7 @@ export default function TeamPartners() {
                 </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://www.instagram.com/tgnhtx?igsh=NXo2MWp5cTkzNXRu" className="flex flex-col items-center gap-2 group">
+                <a href="https://www.instagram.com/tgnhtx?igsh=NXo2MWp5cTkzNXRu" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <img src="/images/sponsor/thegrandnest.jpeg" alt="The Grand Nest" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity rounded-sm" />
                   <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
                     The Grand Nest
@@ -86,7 +86,7 @@ export default function TeamPartners() {
                 </a>
               </div>
               <div className="event-card p-3 flex items-center justify-center bg-black/70">
-                <a href="https://www.instagram.com/jaybhavani_houston?igsh=MWhkM2lubTViOHltaQ==" className="flex flex-col items-center gap-2 group">
+                <a href="https://www.instagram.com/jaybhavani_houston?igsh=MWhkM2lubTViOHltaQ==" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
                   <img src="/images/sponsor/jaibhavani.jpeg" alt="Jai Bhavani" className="h-12 w-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity rounded-sm" />
                   <span className="text-[0.65rem] md:text-[0.75rem] tracking-[0.15em] uppercase text-rg-champ group-hover:text-white transition-colors text-center">
                     Jai Bhavani

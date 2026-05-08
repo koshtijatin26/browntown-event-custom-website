@@ -12,7 +12,7 @@ export default function About() {
           <p className="text-[0.9rem] text-[rgba(255,255,255,0.8)] mb-4">
             Browntown was created to give culture a stage.
             <br />
-            We design high-energy experiences driven by music, identity, and community. Where every detail is intentional and every night feels unforgettable. This isn’t just a party. It’s a BrownTown experience.
+            We design high-energy experiences driven by music, identity, and community. Where every detail is intentional and every night feels unforgettable. This isn’t just a party. It’s a BrownTown experience!
           </p>
         </div>
         <div className="reveal">

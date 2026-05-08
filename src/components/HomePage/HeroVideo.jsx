@@ -25,7 +25,7 @@ export default function HeroVideo() {
         playsInline
         autoPlay
       >
-        <source src="/video/home.mp4" type="video/mp4" />
+        <source src="/video/home-2.mp4" type="video/mp4" />
       </video>
     </>
   );

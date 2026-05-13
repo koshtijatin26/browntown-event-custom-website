@@ -74,8 +74,8 @@ export default function Events({
         </div>
 
         {/* UPCOMING */}
-        {futureEvents?.length > 0 && (
-          <div className="mb-12 reveal">
+        <div className="mb-12 reveal">
+          {futureEvents?.length > 0 &&
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-4 md:gap-0">
               <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
                 Upcoming Events
@@ -84,66 +84,66 @@ export default function Events({
                 The next Browntown night is in the works. We’re building something special - stay tuned!
               </p>
             </div>
+          }
 
-            <Swiper
-              modules={[Autoplay, Pagination]}
-              slidesPerView={1}
-              spaceBetween={24}
-              loop
-              autoplay={{ delay: 4500, disableOnInteraction: false }}
-              pagination={{ clickable: true }}
-              navigation
-            >
-              {/* SLIDE 1 */}
-              {futureEvents?.length > 0 && futureEvents?.map((event) => (
-                <SwiperSlide key={event.id}>
-                  <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
-                    <div className="relative">
-                      <img
-                        src={`${API_URL}${event?.image}`}
-                        alt="Winter RoseGala"
-                        className="w-full h-64 md:h-80 object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                      <div className="absolute bottom-4 left-4 text-xs text-white/90">
-                        <div className="event-tag">{formatDateUS(event?.event_date)}</div>
-                        <div className="text-[0.9rem] font-semibold mt-1">
-                          {event?.venue}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
-                      <div>
-                        <div className="event-tag mb-2">{event?.highlights}</div>
-                        <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[1.3rem] text-rg-champ">
-                          {event?.name}
-                        </h3>
-                        <p className="mt-3 text-[0.86rem] text-white/80">
-                          {event?.description}
-                        </p>
-                      </div>
-
-                      <div className="mt-4 flex items-center justify-between text-[14px]">
-                        <div className="text-white/75">
-                          From{" "}
-                          <span className="text-rg-champ font-semibold text-[22px]">${event?.price}</span>
-                        </div>
-                        <a
-                          target="_blank"
-                          className="btn btn-primary"
-                          href={event?.booking_url}
-                        >
-                          Book
-                        </a>
+          <Swiper
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            spaceBetween={24}
+            loop
+            autoplay={{ delay: 4500, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            navigation
+          >
+            {/* SLIDE 1 */}
+            {futureEvents?.length > 0 && futureEvents?.map((event) => (
+              <SwiperSlide key={event.id}>
+                <div className="event-card grid md:grid-cols-[1.3fr,1fr] overflow-hidden">
+                  <div className="relative">
+                    <img
+                      src={`${API_URL}${event?.image}`}
+                      alt="Winter RoseGala"
+                      className="w-full h-64 md:h-80 object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 text-xs text-white/90">
+                      <div className="event-tag">{formatDateUS(event?.event_date)}</div>
+                      <div className="text-[0.9rem] font-semibold mt-1">
+                        {event?.venue}
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        )}
+
+                  <div className="p-5 md:p-6 flex flex-col justify-between bg-black/70">
+                    <div>
+                      <div className="event-tag mb-2">{event?.highlights}</div>
+                      <h3 className="font-glam font-semibold tracking-[0.18em] uppercase text-[1.3rem] text-rg-champ">
+                        {event?.name}
+                      </h3>
+                      <p className="mt-3 text-[0.86rem] text-white/80">
+                        {event?.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-4 flex items-center justify-between text-[14px]">
+                      <div className="text-white/75">
+                        From{" "}
+                        <span className="text-rg-champ font-semibold text-[22px]">${event?.price}</span>
+                      </div>
+                      <a
+                        target="_blank"
+                        className="btn btn-primary"
+                        href={event?.booking_url}
+                      >
+                        Book
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <div className="flex items-center justify-between mb-4">
           <div className="text-xs font-semibold tracking-[0.2em] uppercase text-[rgba(255,255,255,0.8)]">
